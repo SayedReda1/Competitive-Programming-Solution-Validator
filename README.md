@@ -22,25 +22,27 @@ Hopefully, It's cross-platform and works on:
 
 2. You should see three prompts like this
 
-    <b>how to use image</b>
+    ![how_to_use](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/bf58abd6-ea61-4f73-9a14-04d12cb475aa)
+
     
-    <b>Correct cpp [default -> correct.cpp]:</b><br>
+    - <b>Correct cpp [default -> correct.cpp]:</b><br>
     You can type the brute-force/correct cpp file path here or click ENTER and default path is <b>"./correct.cpp"</b>.
 
-    <b>Wrong cpp [default -> wrong.cpp]:</b><br>
+    - <b>Wrong cpp [default -> wrong.cpp]:</b><br>
     You can type the cpp file path that you wanna test here or click ENTER and default path is <b>"./wrong.cpp"</b>.
 
-    <b># of tests: </b><br>
-    You need to type the number of random test cases to test your code.<br>
-    <span><b style="color: yellow">Warning:</b></span> no default values for this one.
+    - <b># of tests: </b><br>
+    <p>You need to type the number of random test cases to test your code.<br>
+    <span><b style='color:yellow'>Warning:</b></span> no default values for this one.</p>
 
-3. After passing the files you need to wait for couple of seconds and your result for all test cases will appear like this if all passed<br>
+3. After passing the files you need to wait for couple of seconds and your result for all test cases will appear like this if all passed:<br>
     
-    <b>passed image</b>
+    ![passed](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/1eb0b77e-5bca-4d78-a1c9-e59eabaa5aed)
 
-    and when a testcase breaks your solution stress-test will terminate and show like this
+    When a testcase breaks your solution stress-test will terminate and show like this:
     
-    <b>failed image</b>
+    ![failed](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/241cf773-00ae-4f18-9b62-82969831ba84)
+
     
     leaving: 
     - This test case in <b>"./test.txt"</b>
