@@ -1,11 +1,11 @@
 # Competitive-Programming-Solution-Validator
-This is a simple python script that genarates random testcases to stress test your solution
+This is a simple python script that genarates random testcases to stress-test your solution and figure out side case that would break your code.
 
 ### Overview of how it works
 This program is simply taking "gen.cpp" and compile it and then run it. Then, it takes generated testcase and push it into "./test.exe". After that, it compiles the other two (correct.cpp, wrong.cpp) and runs their exe files. Then it passes testcase which we got from "gen.cpp" and pass to both files and pass their outputs into ["correct.txt", "wrong.txt"] and compare the output results. If they are the same then PASSED, otherwise it's FAILED and the program terminates. Obviously, when the program terminates it will leave all text files with their last contents which is testcase that broke your code.
-- "wrong.txt" will have the output of your code which has the problem.
-- "correct.txt" will have the correct output/
-- "test.txt" will have the test that broke your code.
+- <b>"wrong.txt"</b> will contain the output of your code which has the problem.
+- <b>"correct.txt"</b> will contain the correct output/
+- <b>"test.txt"</b> will contain the test that broke your code.
 
 ### Requirements:
 - your-solution.cpp file
@@ -19,8 +19,7 @@ This program is simply taking "gen.cpp" and compile it and then run it. Then, it
 
 2. You should have 4 prompts like these:
 
-    <b>prompts</b>
-
+    ![prompts](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/1d2842b6-8fd6-4a5e-8bdb-03df8d2117e1)
     
     - <b>Correct cpp file path [./correct.cpp]:</b><br>
     You can type the brute-force/correct cpp file path here or click ENTER and default path is <b>"./correct.cpp"</b>.
@@ -32,16 +31,17 @@ This program is simply taking "gen.cpp" and compile it and then run it. Then, it
     You can type generator.cpp file path here or click ENTER and default path is <b>"./gen.cpp"</b>.
 
     - <b># of tests: </b><br>
-    <p>You need to type the number of random test cases to test your code.<br>
-    <span style='color:yellow; font-weight: bold;'>Warning:</span> no default values for this one.</p>
+   You need to type the number of random test cases to test your code.<br>
+   <b>Warning:</b> no default values for this one.
 
 3. After passing the files, you need to wait for couple of seconds and your result for all test cases will appear like this if all passed:<br>
     
-    <b>passed</b>
+    ![passed](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/94def73e-f33d-4030-8b7e-5b961b6af50a)
+
 
     When a testcase breaks your code, stress-tester will terminate and show like this:
     
-    <b>failed</b>
+    ![failed](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/781022fa-26f8-413d-9f09-0a10ab3a6236)
 
     leaving 3 text files:
     - This test case that broke your solution in <b>"./test.txt"</b>
