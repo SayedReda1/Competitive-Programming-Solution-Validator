@@ -44,6 +44,7 @@ This program is simply taking "gen.cpp" and compile it and then run it. Then, it
     ![failed](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/781022fa-26f8-413d-9f09-0a10ab3a6236)
 
     leaving 3 text files:
+    - The line number of ouput difference
     - This test case that broke your solution in <b>"./test.txt"</b>
     - Brute-force/correct output in <b>"./correct.txt"</b>
     - Your code output in <b>"./wrong.txt"</b>
@@ -55,6 +56,8 @@ This program is simply taking "gen.cpp" and compile it and then run it. Then, it
     - N or ENTER -> terminates the program 
     
 
-### Future Updates:
-If you have any better idea or any recommendation, feel free to contact me right away and I would be happy to have it.
-I will also add any new features or enhancements that come in mind ISA.
+### Issues:
+- This idea works only with one-expected-output computational problems not the ones that may have different correct outputs because it only validates solutions through comparing outputs.
+- It obviously doesn't work with interactive problems (which may be included in future updates)
+
+I would be happy to receive any improvement ideas. If you have one, feel free to contact me right away ^_^.

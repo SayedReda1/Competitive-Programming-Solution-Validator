@@ -4,6 +4,19 @@
 # Import the necessary modules
 import os
 
+# Compares and finds the line of differ
+def find_differ(s1, s2):
+    l1 = s1.split('\n')
+    l2 = s2.split('\n')
+
+    size1, size2 = len(l1), len(l2)
+
+    for i in range(max(size1, size2)):
+        if (i == size1 or i == size2): return i+1
+        if (l1[i].strip() != l2[i].strip()):
+            return i+1
+        
+    return None
 
 # Define the function to compare the output of the two solutions
 def compare():
@@ -18,11 +31,14 @@ def compare():
     correct = open("correct.txt", "r")
     wrong = open("wrong.txt", "r")
 
-    ans = (correct.read().strip() == wrong.read().strip())
+    ans = find_differ(correct.read(), wrong.read())
+
     correct.close()
     wrong.close()
 
-    return ans
+    if ans != None:
+        return [False, ans]
+    return [True, None]
 
 
 
@@ -43,7 +59,7 @@ def main():
 
     # Get number of test cases
     tests = int(input("# of tests: "))
-    print('-'*20) # separator
+    print('-'*30) # separator
 
     os.system(f"g++ {correct_file} -o correct.exe")
     os.system(f"g++ {wrong_file} -o wrong.exe")
@@ -58,11 +74,12 @@ def main():
 
         # Compare the output of the two solutions on the current test case
         res = compare()
-        if (res):
+        if (res[0]):
             print("PASSED")
         else:
-            print("FAILED :(")
+            print(f"FAILED :( \n-> Output differs in line {res[1]}")
             return
+        
 
 # Call the main function
 if __name__ == "__main__":
@@ -70,4 +87,4 @@ if __name__ == "__main__":
     response = input("\nAnother test [Y, N]: ").strip()
     while response.lower() == 'y':
         main()
-        response = input("\n\nAnother test [Y, N]: ").strip()
+        response = input("\nAnother test [Y, N]: ").strip()
