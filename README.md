@@ -39,9 +39,12 @@ This program is simply taking "gen.cpp" and compile it and then run it. Then, it
     ![passed](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/94def73e-f33d-4030-8b7e-5b961b6af50a)
 
 
-    When a testcase breaks your code, stress-tester will terminate and show like this:
+    When a testcase breaks your code, stress-tester will immediately terminate and show like this:
+
+   
+    ![failed](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/0eee1fc8-189b-43aa-bb1d-077811953305)
+
     
-    ![failed](https://github.com/SayedReda1/Competitive-Programming-Solution-Validator/assets/71211593/781022fa-26f8-413d-9f09-0a10ab3a6236)
 
     leaving 3 text files:
     - The line number of ouput difference
